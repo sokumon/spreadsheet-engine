@@ -1,0 +1,104 @@
+[
+    {
+        "calls": "SPLIT('A,B,C', ',')",
+        "result": "A,B,C"
+    },{
+        "calls": "REGEXMATCH('Palo Alto', 'Alto')",
+        "result": "true"
+    },{
+        "calls": "REGEXEXTRACT('Palo Alto', 'Alto')",
+        "result": "Alto"
+    },
+    {
+        "calls": "REGEXREPLACE('Sutoiku', 'utoiku', 'TOIC')",
+        "result": "STOIC"
+    },
+    {
+        "calls": "NUMBERVALUE('2.500,27', ',', '.')",
+        "result": "2500.27"
+    },
+    {
+        "calls": "AGGREGATE(9, 4, [-5,15], [32,'Hello World!'])",
+        "result": "10,32"
+    },{
+        "calls": "COUNTUNIQUE([1,1,2,2,3,3])",
+        "result": "3"
+    },{
+        "calls": "COVARIANCEP([3,2,4,5,6], [9,7,12,15,17])",
+        "result": "5.2"
+    },{
+        "calls": "COVARIANCES([2,4,8], [5,11,12])",
+        "result": "9.666666666666668"
+    },{
+        "calls": "CEILINGMATH(-5.5, 2, -1)",
+        "result": "-6"
+    },
+    {
+        "calls": "CEILINGPRECISE(-4.1, -2)",
+        "result": "-4"
+    },{
+        "calls": "VARS([2,4], [8,16], [true, false])",
+        "result": "38.333333333333336"
+    },{
+        "calls": "WEIBULLDIST(105, 20, 100, true)",
+        "result": "0.9295813900692769"
+    },{
+        "calls": "STDEVS([2,4], [8,16], [true, false])",
+        "result": "6.191391873668904"
+    },{
+        "calls": "NETWORKDAYSINTL('1/1/2006', '2/1/2006', 7, ['1/2/2006'])",
+        "result": "23"
+    },{
+        "calls": "ISOCEILING(-4.1, -2)",
+        "result": "-4"
+    },{
+        "calls": "QUARTILEEXC([1,2,3,4], 1)",
+        "result": "1.25"
+    },    {
+        "calls": "RANKEQ(4, [2,4,4,8,8,16], false)",
+        "result": "4"
+    },    {
+        "calls": "RANKAVG(4, [2,4,4,8,8,16], false)",
+        "result": "4.5"
+    },    {
+        "calls": "QUARTILEINC([1,2,3,4], 1)",
+        "result": "1.75"
+    },{
+        "calls": "SKEWP([3,4,5,2,3,4,5,6,4,7])",
+        "result": "0.303193339354144"
+    },{
+        "calls": "POISSONDIST(2, 5, true)",
+        "result": "0.12465201948308113"
+    },{
+        "calls": "FLOORMATH(-4.1, -2, -1)",
+        "result": "-4"
+    },
+    {
+        "calls": "FLOORPRECISE(-3.1, -2)",
+        "result": "-4"
+    },{
+        "calls": "LOGNORMINV(0.0390835557068005, 3.5, 1.2, true)",
+        "result": "4.000000000000001"
+    },{
+        "calls": "MODEMULT([1,2,3,4,3,2,1,2,3])",
+        "result": "2,3"
+    },
+    {
+        "calls": "MODESNGL([1,2,3,4,3,2,1,2,3])",
+        "result": "2"
+    },{
+        "calls": "PERCENTILEEXC([1,2,3,4], 0.3)",
+        "result": "1.5"
+    },
+    {
+        "calls": "PERCENTILEINC([1,2,3,4], 0.3)",
+        "result": "1.9"
+    },
+    {
+        "calls": "PERCENTRANKEXC([1,2,3,4], 2, 2)",
+        "result": "0.4"
+    },{
+        "calls": "PERCENTRANKINC([1,2,3,4], 2, 2)",
+        "result": "0.33"
+    }
+]

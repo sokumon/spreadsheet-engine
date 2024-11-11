@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula Recommender </title>
+</head>
+<body>
+    Formula Suggester
+    <input type="text" name="" id="formulaInput">
+    <div id="suggestionsList"></div>
+    <div id="formulaSuggest">
+    </div>
+
+    <style>
+      .suggest {
+         background-color: red;
+      }
+    </style>
+    <script>
+        let suggestions = [];
+        let formulaInput = document.getElementById("formulaInput")
+        let formulaSuggest = document.getElementById("formulaSuggest")
+        async function loadJSON(){
+            if(localStorage.key("suggestion")){
+               return;
+            }
+            let response = await fetch("/hacks/formuala_meta_programs/completion.json");
+            let jsonObject = await response.json();
+            localStorage.setItem("suggestion",JSON.stringify(jsonObject))
+        }
+
+        suggestions = JSON.parse(localStorage.getItem("suggestion"))
+        console.log(suggestions)
+
+        formulaInput.addEventListener("input", function(e){
+            formulaSuggest.innerHTML = ''
+            let value = e.target.value.toUpperCase()
+            let searchTerm = `^${value.split('(')[0]}`
+            let searchRegex = new RegExp(`^${searchTerm}`);
+            let options = suggestions.filter(el => {
+               return searchRegex.test(el.name)
+            })
+            if(options.length > 0){
+               if(value.includes("(")){
+                  console.log(value)
+                  console.log(options[0])
+                  createSuggestion(options[0])
+                  suggestArgs(value)
+               }
+            }
+        })
+
+        function suggestArgs(value){
+            var matches = value.match(/,/g);
+            let children = Array.prototype.slice.call(formulaSuggest.children)
+            children.map(child => child.classList.remove("suggest"))
+            if(!matches){
+               children[0].classList.add("suggest")
+            }else{
+               children[matches.length].classList.add("suggest")
+            }
+        }
+        let test =    {
+        "name": "ACCRINT",
+        "parameters": [
+         {
+            "name": "issue",
+            "type": "any"
+         },
+         {
+            "name": "first_interest",
+            "type": "any"
+         },
+         {
+            "name": "settlement",
+            "type": "any"
+         },
+         {
+            "name": "rate",
+            "type": "any"
+         },
+         {
+            "name": "par",
+            "type": "any"
+         },
+         {
+            "name": "frequency",
+            "type": "any"
+         },
+         {
+            "name": "basis",
+            "type": "any"
+         }
+      ],}
+        function createSuggestion(test){
+         formulaSuggest.innerHTML = ""
+         let fName = document.createTextNode(`${test["name"]}(`)
+         formulaSuggest.appendChild(fName)
+         for(let i=0;i < test.parameters.length ; i++){
+               let span = document.createElement("span")
+               span.innerText = test.parameters[i].name + ','
+               if(i == test.parameters.length -1 ){
+                  span.innerText = test.parameters[i].name 
+               }
+            
+               formulaSuggest.appendChild(span)
+         }
+         let cParen = document.createTextNode(")")
+         formulaSuggest.appendChild(cParen)
+        }
+        loadJSON();
+    </script>
+</body>
+</html>

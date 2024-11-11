@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Engine</title>
+</head>
+<body>
+    <script src="build/engine.js"></script>
+    <script>
+        let sengine = new Engine()
+        let workbook = sengine.createWorkBook("Untitled SpreadSheet")
+        let sheetOne = workbook.addSheet()
+        let data = sheetOne.initSheet()
+
+        // All implemented Formulas
+        console.log(sengine.formulas)
+        console.log(sengine.argSuggestion)
+        // some input from dt
+        sheetOne.addCell("A1","1")
+        // Recalulation happens in flush
+        sheetOne.flush()
+
+        sheetOne.addCell("B1","1234")
+        
+
+    </script>
+    <!-- <script src="node_modules/@formulajs/formulajs/types/esm/index.d.mts"></script> -->
+</body>
+</html>

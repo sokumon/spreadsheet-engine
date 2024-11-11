@@ -1,0 +1,1042 @@
+[
+    {
+        "calls": "DATE(2008, 7, 8)",
+        "result": "Tue Jul 08 2008 00:00:00 GMT+0530 (India Standard Time)"
+    },
+    {
+        "calls": "DATEVALUE('8/22/2011')",
+        "result": "Mon Aug 22 2011 00:00:00 GMT+0530 (India Standard Time)"
+    },
+    {
+        "calls": "DAY('15-Apr-11')",
+        "result": "15"
+    },
+    {
+        "calls": "DAYS('3/15/11', '2/1/11')",
+        "result": "42"
+    },
+    {
+        "calls": "DAYS360('1-Jan-11', '31-Dec-11')",
+        "result": "360"
+    },
+    {
+        "calls": "EDATE('1/15/11', -1)",
+        "result": "Wed Dec 15 2010 00:00:00 GMT+0530 (India Standard Time)"
+    },
+    {
+        "calls": "EOMONTH('1/1/11', -3)",
+        "result": "Sun Oct 31 2010 00:00:00 GMT+0530 (India Standard Time)"
+    },
+    {
+        "calls": "HOUR('7/18/2011 7:45:00 AM')",
+        "result": "7"
+    },
+    {
+        "calls": "MINUTE('2/1/2011 12:45:00 PM')",
+        "result": "45"
+    },
+    {
+        "calls": "ISOWEEKNUM('3/9/2012')",
+        "result": "10"
+    },
+    {
+        "calls": "MONTH('15-Apr-11')",
+        "result": "4"
+    },
+    {
+        "calls": "NETWORKDAYS('10/1/2012', '3/1/2013', ['11/22/2012'])",
+        "result": "109"
+    },
+    {
+        "calls": "NOW()",
+        "result": "Thu Feb 20 2020 23:02:55 GMT+0100 (Central European Standard Time)"
+    },
+    {
+        "calls": "SECOND('2/1/2011 4:48:18 PM')",
+        "result": "18"
+    },
+    {
+        "calls": "TIME(16, 48, 10)",
+        "result": "0.7001157407407408"
+    },
+    {
+        "calls": "TIMEVALUE('22-Aug-2011 6:35 AM')",
+        "result": "0.2743055555555556"
+    },
+    {
+        "calls": "TODAY()",
+        "result": "Thu Feb 20 2020 23:02:55 GMT+0100 (Central European Standard Time)"
+    },
+    {
+        "calls": "WEEKDAY('2/14/2008', 3)",
+        "result": "3"
+    },
+    {
+        "calls": "YEAR('7/5/2008')",
+        "result": "2008"
+    },
+    {
+        "calls": "WEEKNUM('3/9/2012', 2)",
+        "result": "11"
+    },
+    {
+        "calls": "WORKDAY('10/1/2008', 151, ['11/26/2008', '12/4/2008'])",
+        "result": "Mon May 04 2009 00:00:00 GMT+0530 (India Standard Time)"
+    },
+    {
+        "calls": "WORKDAYINTL('1/1/2012', 30, 17)",
+        "result": "Sun Feb 05 2012 00:00:00 GMT+0530 (India Standard Time)"
+    },
+    {
+        "calls": "YEARFRAC('1/1/2012', '7/30/2012', 3)",
+        "result": "0.5780821917808219"
+    },
+    {
+        "calls": "ACCRINT('01/01/2011', '02/01/2011', '07/01/2014', 0.1, 1000, 1, 0)",
+        "result": "350"
+    },
+    {
+        "calls": "CUMIPMT(0.1/12, 30*12, 100000, 13, 24, 0)",
+        "result": "-9916.77251395708"
+    },
+    {
+        "calls": "CUMPRINC(0.1/12, 30*12, 100000, 13, 24, 0)",
+        "result": "-614.0863271085149"
+    },
+    {
+        "calls": "DB(1000000, 100000, 6, 1, 6)",
+        "result": "159500"
+    },
+    {
+        "calls": "DDB(1000000, 100000, 6, 1, 1.5)",
+        "result": "250000"
+    },
+    {
+        "calls": "DOLLARDE(1.1, 16)",
+        "result": "1.625"
+    },
+    {
+        "calls": "DOLLARFR(1.625, 16)",
+        "result": "1.1"
+    },
+    {
+        "calls": "EFFECT(0.1, 4)",
+        "result": "0.10381289062499977"
+    },
+    {
+        "calls": "FV(0.1/12, 10, -100, -1000, 0)",
+        "result": "2124.874409194097"
+    },
+    {
+        "calls": "FVSCHEDULE(100, [0.09,0.1,0.11])",
+        "result": "133.08900000000003"
+    },
+    {
+        "calls": "IPMT(0.1/12, 6, 2*12, 100000, 1000000, 0)",
+        "result": "928.8235718400465"
+    },
+    {
+        "calls": "IRR([-75000,12000,15000,18000,21000,24000], 0.075)",
+        "result": "0.05715142887178447"
+    },
+    {
+        "calls": "ISPMT(0.1/12, 6, 2*12, 100000)",
+        "result": "-625"
+    },
+    {
+        "calls": "MIRR([-75000,12000,15000,18000,21000,24000], 0.1, 0.12)",
+        "result": "0.07971710360838036"
+    },
+    {
+        "calls": "NOMINAL(0.1, 4)",
+        "result": "0.09645475633778045"
+    },
+    {
+        "calls": "NPER(0.1/12, -100, -1000, 10000, 0)",
+        "result": "63.39385422740764"
+    },
+    {
+        "calls": "NPV(0.1, -10000, 2000, 4000, 8000)",
+        "result": "1031.3503176012546"
+    },
+    {
+        "calls": "PDURATION(0.1, 1000, 2000)",
+        "result": "7.272540897341714"
+    },
+    {
+        "calls": "PMT(0.1/12, 2*12, 100000, 1000000, 0)",
+        "result": "-42426.08563793503"
+    },
+    {
+        "calls": "PPMT(0.1/12, 6, 2*12, 100000, 1000000, 0)",
+        "result": "-43354.909209775076"
+    },
+    {
+        "calls": "PV(0.1/12, 2*12, 1000, 10000, 0)",
+        "result": "-29864.950264779152"
+    },
+    {
+        "calls": "RATE(2*12, -1000, -10000, 100000, 0, 0.1)",
+        "result": "0.06517891177181533"
+    },
+    {
+        "calls": "BINTODEC(101010)",
+        "result": "42"
+    },
+    {
+        "calls": "BINTOHEX(101010)",
+        "result": "2a"
+    },
+    {
+        "calls": "BINTOOCT(101010)",
+        "result": "52"
+    },
+    {
+        "calls": "BITAND(42, 24)",
+        "result": "8"
+    },
+    {
+        "calls": "BITLSHIFT(42, 24)",
+        "result": "704643072"
+    },
+    {
+        "calls": "BITOR(42, 24)",
+        "result": "58"
+    },
+    {
+        "calls": "BITRSHIFT(42, 2)",
+        "result": "10"
+    },
+    {
+        "calls": "BITXOR(42, 24)",
+        "result": "50"
+    },
+    {
+        "calls": "COMPLEX(3, 4)",
+        "result": "3+4i"
+    },
+    {
+        "calls": "CONVERT(64, 'kibyte', 'bit')",
+        "result": "524288"
+    },
+    {
+        "calls": "DECTOBIN(42)",
+        "result": "101010"
+    },
+    {
+        "calls": "DECTOHEX(42)",
+        "result": "2a"
+    },
+    {
+        "calls": "DECTOOCT(42)",
+        "result": "52"
+    },
+    {
+        "calls": "DELTA(42, 42)",
+        "result": "1"
+    },
+    {
+        "calls": "ERF(1)",
+        "result": "0.8427007929497149"
+    },
+    {
+        "calls": "ERFC(1)",
+        "result": "0.1572992070502851"
+    },
+    {
+        "calls": "GESTEP(42, 24)",
+        "result": "1"
+    },
+    {
+        "calls": "HEX2BIN('2a')",
+        "result": "101010"
+    },
+    {
+        "calls": "HEX2DEC('2a')",
+        "result": "42"
+    },
+    {
+        "calls": "HEX2OCT('2a')",
+        "result": "52"
+    },
+    {
+        "calls": "IMABS('3+4i')",
+        "result": "5"
+    },
+    {
+        "calls": "IMAGINARY('3+4i')",
+        "result": "4"
+    },
+    {
+        "calls": "IMARGUMENT('3+4i')",
+        "result": "0.9272952180016122"
+    },
+    {
+        "calls": "IMCONJUGATE('3+4i')",
+        "result": "3-4i"
+    },
+    {
+        "calls": "IMCOS('1+i')",
+        "result": "0.8337300251311491-0.9888977057628651i"
+    },
+    {
+        "calls": "IMCOSH('1+i')",
+        "result": "0.8337300251311491+0.9888977057628651i"
+    },
+    {
+        "calls": "IMCOT('1+i')",
+        "result": "0.21762156185440265-0.8680141428959249i"
+    },
+    {
+        "calls": "IMCSC('1+i')",
+        "result": "0.6215180171704283-0.3039310016284264i"
+    },
+    {
+        "calls": "IMCSCH('1+i')",
+        "result": "0.3039310016284264-0.6215180171704283i"
+    },
+    {
+        "calls": "IMDIV('1+2i', '3+4i')",
+        "result": "0.44+0.08i"
+    },
+    {
+        "calls": "IMEXP('1+i')",
+        "result": "1.4686939399158851+2.2873552871788423i"
+    },
+    {
+        "calls": "IMLN('1+i')",
+        "result": "0.3465735902799727+0.7853981633974483i"
+    },
+    {
+        "calls": "IMLOG10('1+i')",
+        "result": "0.1505149978319906+0.3410940884604603i"
+    },
+    {
+        "calls": "IMLOG2('1+i')",
+        "result": "0.5000000000000001+1.1330900354567985i"
+    },
+    {
+        "calls": "IMPOWER('1+i', 2)",
+        "result": "1.2246467991473535e-16+2.0000000000000004i"
+    },
+    {
+        "calls": "IMPRODUCT('1+2i', '3+4i', '5+6i')",
+        "result": "-85+20i"
+    },
+    {
+        "calls": "IMREAL('3+4i')",
+        "result": "3"
+    },
+    {
+        "calls": "IMSEC('1+i')",
+        "result": "0.4983370305551868+0.591083841721045i"
+    },
+    {
+        "calls": "IMSECH('1+i')",
+        "result": "0.4983370305551868-0.591083841721045i"
+    },
+    {
+        "calls": "IMSIN('1+i')",
+        "result": "1.2984575814159773+0.6349639147847361i"
+    },
+    {
+        "calls": "IMSINH('1+i')",
+        "result": "0.6349639147847361+1.2984575814159773i"
+    },
+    {
+        "calls": "IMSQRT('1+i')",
+        "result": "1.0986841134678098+0.45508986056222733i"
+    },
+    {
+        "calls": "IMSUB('3+4i', '1+2i')",
+        "result": "2+2i"
+    },
+    {
+        "calls": "IMSUM('1+2i', '3+4i', '5+6i')",
+        "result": "9+12i"
+    },
+    {
+        "calls": "IMTAN('1+i')",
+        "result": "0.2717525853195117+1.0839233273386946i"
+    },
+    {
+        "calls": "OCT2BIN('52')",
+        "result": "101010"
+    },
+    {
+        "calls": "OCT2DEC('52')",
+        "result": "42"
+    },
+    {
+        "calls": "OCT2HEX('52')",
+        "result": "2a"
+    },
+    {
+        "calls": "AND(true, false, true)",
+        "result": "false"
+    },
+    {
+        "calls": "FALSE()",
+        "result": "false"
+    },
+    {
+        "calls": "IF(true, 'Hello!', 'Goodbye!')",
+        "result": "Hello!"
+    },
+    {
+        "calls": "IFS(false, 'Hello!', true, 'Goodbye!')",
+        "result": "Goodbye!"
+    },
+    {
+        "calls": "IFERROR('#DIV/0!', 'Error')",
+        "result": "#DIV/0!"
+    },
+    {
+        "calls": "IFNA('#N/A', 'Error')",
+        "result": "#N/A"
+    },
+    {
+        "calls": "NOT(true)",
+        "result": "false"
+    },
+    {
+        "calls": "OR(true, false, true)",
+        "result": "true"
+    },
+    {
+        "calls": "SWITCH(7, 9, 'Nine', 7, 'Seven')",
+        "result": "Seven"
+    },
+    {
+        "calls": "TRUE()",
+        "result": "true"
+    },
+    {
+        "calls": "XOR(true, false, true)",
+        "result": "false"
+    },
+    {
+        "calls": "ABS(-4)",
+        "result": "4"
+    },
+    {
+        "calls": "ACOS(-0.5)",
+        "result": "2.0943951023931957"
+    },
+    {
+        "calls": "ACOSH(10)",
+        "result": "2.993222846126381"
+    },
+    {
+        "calls": "ACOT(2)",
+        "result": "0.46364760900080615"
+    },
+    {
+        "calls": "ACOTH(6)",
+        "result": "0.16823611831060645"
+    },
+    {
+        "calls": "ARABIC('MCMXII')",
+        "result": "1912"
+    },
+    {
+        "calls": "ASIN(-0.5)",
+        "result": "-0.5235987755982988"
+    },
+    {
+        "calls": "ASINH(-2.5)",
+        "result": "-1.6472311463710965"
+    },
+    {
+        "calls": "ATAN(1)",
+        "result": "0.7853981633974483"
+    },
+    {
+        "calls": "ATAN2(-1, -1)",
+        "result": "-2.356194490192345"
+    },
+    {
+        "calls": "ATANH(-0.1)",
+        "result": "-0.10033534773107562"
+    },
+    {
+        "calls": "BASE(15, 2, 10)",
+        "result": "0000001111"
+    },
+    {
+        "calls": "CEILING(-5.5, 2, -1)",
+        "result": "-6"
+    },
+    {
+        "calls": "COMBIN(8, 2)",
+        "result": "28"
+    },
+    {
+        "calls": "COMBINA(4, 3)",
+        "result": "20"
+    },
+    {
+        "calls": "COS(1)",
+        "result": "0.5403023058681398"
+    },
+    {
+        "calls": "COSH(1)",
+        "result": "1.5430806348152437"
+    },
+    {
+        "calls": "COT(30)",
+        "result": "-0.15611995216165922"
+    },
+    {
+        "calls": "COTH(2)",
+        "result": "1.0373147207275482"
+    },
+    {
+        "calls": "CSC(15)",
+        "result": "1.5377805615408537"
+    },
+    {
+        "calls": "CSCH(1.5)",
+        "result": "0.46964244059522464"
+    },
+    {
+        "calls": "DECIMAL('FF', 16)",
+        "result": "255"
+    },
+    {
+        "calls": "ERF(1)",
+        "result": "0.8427007929497149"
+    },
+    {
+        "calls": "ERFC(1)",
+        "result": "0.1572992070502851"
+    },
+    {
+        "calls": "EVEN(-1)",
+        "result": "-2"
+    },
+    {
+        "calls": "EXP(1)",
+        "result": "2.718281828459045"
+    },
+    {
+        "calls": "FACT(5)",
+        "result": "120"
+    },
+    {
+        "calls": "FACTDOUBLE(7)",
+        "result": "105"
+    },
+    {
+        "calls": "FLOOR(-3.1)",
+        "result": "0"
+    },
+    {
+        "calls": "GCD(24, 36, 48)",
+        "result": "12"
+    },
+    {
+        "calls": "INT(-8.9)",
+        "result": "-9"
+    },
+    {
+        "calls": "ISEVEN(-2.5)",
+        "result": "true"
+    },
+    {
+        "calls": "ISODD(-2.5)",
+        "result": "false"
+    },
+    {
+        "calls": "LCM(24, 36, 48)",
+        "result": "144"
+    },
+    {
+        "calls": "LN(86)",
+        "result": "4.454347296253507"
+    },
+    {
+        "calls": "LOG(8, 2)",
+        "result": "3"
+    },
+    {
+        "calls": "LOG10(100000)",
+        "result": "5"
+    },
+    {
+        "calls": "MOD(3, -2)",
+        "result": "-1"
+    },
+    {
+        "calls": "MROUND(-10, -3)",
+        "result": "-9"
+    },
+    {
+        "calls": "MULTINOMIAL(2, 3, 4)",
+        "result": "1260"
+    },
+    {
+        "calls": "ODD(-1.5)",
+        "result": "-3"
+    },
+    {
+        "calls": "POWER(5, 2)",
+        "result": "25"
+    },
+    {
+        "calls": "PRODUCT(5, 15, 30)",
+        "result": "2250"
+    },
+    {
+        "calls": "QUOTIENT(-10, 3)",
+        "result": "-3"
+    },
+    {
+        "calls": "RADIANS(180)",
+        "result": "3.141592653589793"
+    },
+    {
+        "calls": "RAND()",
+        "result": "[Random real number greater between 0 and 1]"
+    },
+    {
+        "calls": "RANDBETWEEN(-1, 1)",
+        "result": "[Random integer between bottom and top]"
+    },
+    {
+        "calls": "ROUND(626.3, -3)",
+        "result": "1000"
+    },
+    {
+        "calls": "ROUNDDOWN(-3.14159, 2)",
+        "result": "-3.14"
+    },
+    {
+        "calls": "ROUNDUP(-3.14159, 2)",
+        "result": "-3.15"
+    },
+    {
+        "calls": "SEC(45)",
+        "result": "1.9035944074044246"
+    },
+    {
+        "calls": "SECH(45)",
+        "result": "5.725037161098787e-20"
+    },
+    {
+        "calls": "SIGN(-0.00001)",
+        "result": "-1"
+    },
+    {
+        "calls": "SIN(1)",
+        "result": "0.8414709848078965"
+    },
+    {
+        "calls": "SINH(1)",
+        "result": "1.1752011936438014"
+    },
+    {
+        "calls": "SQRT(16)",
+        "result": "4"
+    },
+    {
+        "calls": "SQRTPI(2)",
+        "result": "2.5066282746310002"
+    },
+    {
+        "calls": "SUBTOTAL(9, [-5,15], [32,'Hello World!'])",
+        "result": "10"
+    },
+    {
+        "calls": "SUM(-5, 15, 32, 'Hello World!')",
+        "result": "42"
+    },
+    {
+        "calls": "SUMIF([2,4,8,16], '>5')",
+        "result": "24"
+    },
+    {
+        "calls": "SUMIFS([2,4,8,16], [1,2,3,4], '>=2', [1,2,4,8], '<=4')",
+        "result": "12"
+    },
+    {
+        "calls": "SUMPRODUCT([[1,2],[3,4]], [[1,0],[0,1]])",
+        "result": "5"
+    },
+    {
+        "calls": "SUMSQ(3, 4)",
+        "result": "25"
+    },
+    {
+        "calls": "SUMX2MY2([1,2], [3,4])",
+        "result": "-20"
+    },
+    {
+        "calls": "SUMX2PY2([1,2], [3,4])",
+        "result": "30"
+    },
+    {
+        "calls": "SUMXMY2([1,2], [3,4])",
+        "result": "8"
+    },
+    {
+        "calls": "TAN(1)",
+        "result": "1.5574077246549023"
+    },
+    {
+        "calls": "TANH(-2)",
+        "result": "-0.9640275800758168"
+    },
+    {
+        "calls": "TRUNC(-8.9)",
+        "result": "-8"
+    },
+    {
+        "calls": "AVEDEV([2,4], [8,16])",
+        "result": "4.5"
+    },
+    {
+        "calls": "AVERAGE([2,4], [8,16])",
+        "result": "7.5"
+    },
+    {
+        "calls": "AVERAGEA([2,4], [8,16])",
+        "result": "7.5"
+    },
+    {
+        "calls": "AVERAGEIF([2,4,8,16], '>5', [1, 2, 3, 4])",
+        "result": "3.5"
+    },
+    {
+        "calls": "AVERAGEIFS([2,4,8,16], [1,2,3,4], '>=2', [1,2,4,8], '<=4')",
+        "result": "6"
+    },
+    {
+        "calls": "BETADIST(2, 8, 10, true, 1, 3)",
+        "result": "0.6854705810117458"
+    },
+    {
+        "calls": "BETAINV(0.6854705810117458, 8, 10, 1, 3)",
+        "result": "1.9999999999999998"
+    },
+    {
+        "calls": "BINOMDIST(6, 10, 0.5, false)",
+        "result": "0.205078125"
+    },
+    {
+        "calls": "CORREL([3,2,4,5,6], [9,7,12,15,17])",
+        "result": "0.9970544855015815"
+    },
+    {
+        "calls": "COUNT([1,2], [3,4])",
+        "result": "4"
+    },
+    {
+        "calls": "COUNTA([1, '', 3, 'a', '', 'c'])",
+        "result": "4"
+    },
+    {
+        "calls": "COUNTBLANK([1, '', 3, 'a', '', 'c'])",
+        "result": "2"
+    },
+    {
+        "calls": "COUNTIF(['Caen', 'Melbourne', 'Palo Alto', 'Singapore'], 'a')",
+        "result": "0"
+    },
+    {
+        "calls": "COUNTIFS([2,4,8,16], [1,2,3,4], '>=2', [1,2,4,8], '<=4')",
+        "result": "0"
+    },
+    {
+        "calls": "DEVSQ([2,4,8,16])",
+        "result": "115"
+    },
+    {
+        "calls": "EXPONDIST(0.2, 10, true)",
+        "result": "0.8646647167633873"
+    },
+    {
+        "calls": "FDIST(15.2069, 6, 4, false)",
+        "result": "0.0012237917087831735"
+    },
+    {
+        "calls": "FINV(0.01, 6, 4)",
+        "result": "0.10930991412457851"
+    },
+    {
+        "calls": "FISHER(0.75)",
+        "result": "0.9729550745276566"
+    },
+    {
+        "calls": "FISHERINV(0.9729550745276566)",
+        "result": "0.75"
+    },
+    {
+        "calls": "FORECAST(30, [6,7,9,15,21], [20,28,31,38,40])",
+        "result": "10.607253086419755"
+    },
+    {
+        "calls": "FREQUENCY([79,85,78,85,50,81,95,88,97], [70,79,89])",
+        "result": "1,2,4,2"
+    },
+    {
+        "calls": "GAMMA(2.5)",
+        "result": "1.3293403919101043"
+    },
+    {
+        "calls": "GAMMALN(10)",
+        "result": "12.801827480081961"
+    },
+    {
+        "calls": "GAUSS(2)",
+        "result": "0.4772498680518208"
+    },
+    {
+        "calls": "GEOMEAN([2,4], [8,16])",
+        "result": "5.656854249492381"
+    },
+    {
+        "calls": "GROWTH([2,4,8,16], [1,2,3,4], [5])",
+        "result": "32.00000000000003"
+    },
+    {
+        "calls": "HARMEAN([2,4], [8,16])",
+        "result": "4.266666666666667"
+    },
+    {
+        "calls": "HYPGEOMDIST(1, 4, 8, 20, false)",
+        "result": "0.3632610939112487"
+    },
+    {
+        "calls": "INTERCEPT([2,3,9,1,8], [6,5,11,7,5])",
+        "result": "0.04838709677419217"
+    },
+    {
+        "calls": "KURT([3,4,5,2,3,4,5,6,4,7])",
+        "result": "-0.15179963720841627"
+    },
+    {
+        "calls": "LARGE([3,5,3,5,4,4,2,4,6,7], 3)",
+        "result": "5"
+    },
+    {
+        "calls": "LINEST([1,9,5,7], [0,4,2,3], true, true)",
+        "result": "2,1"
+    },
+    {
+        "calls": "LOGNORMDIST(4, 3.5, 1.2, true)",
+        "result": "0.0390835557068005"
+    },
+    {
+        "calls": "MAX([0.1,0.2], [0.4,0.8], [true, false])",
+        "result": "0.8"
+    },
+    {
+        "calls": "MAXA([0.1,0.2], [0.4,0.8], [true, false])",
+        "result": "1"
+    },
+    {
+        "calls": "MEDIAN([1,2,3], [4,5,6])",
+        "result": "3.5"
+    },
+    {
+        "calls": "MIN([0.1,0.2], [0.4,0.8], [true, false])",
+        "result": "0.1"
+    },
+    {
+        "calls": "MINA([0.1,0.2], [0.4,0.8], [true, false])",
+        "result": "0"
+    },
+    {
+        "calls": "NORMDIST(42, 40, 1.5, true)",
+        "result": "0.9087887802741321"
+    },
+    {
+        "calls": "NORMINV(0.9087887802741321, 40, 1.5)",
+        "result": "42"
+    },
+    {
+        "calls": "NORMSDIST(1, true)",
+        "result": "0.8413447460685429"
+    },
+    {
+        "calls": "NORMSINV(0.8413447460685429)",
+        "result": "1.0000000000000002"
+    },
+    {
+        "calls": "PEARSON([9,7,5,3,1], [10,6,1,5,3])",
+        "result": "0.6993786061802354"
+    },
+    {
+        "calls": "PERMUT(100, 3)",
+        "result": "970200"
+    },
+    {
+        "calls": "PERMUTATIONA(4, 3)",
+        "result": "64"
+    },
+    {
+        "calls": "PHI(0.75)",
+        "result": "0.30113743215480443"
+    },
+    {
+        "calls": "PROB([1,2,3,4], [0.1,0.2,0.2,0.1], 2, 3)",
+        "result": "0.4"
+    },
+    {
+        "calls": "RSQ([9,7,5,3,1], [10,6,1,5,3])",
+        "result": "0.4891304347826088"
+    },
+    {
+        "calls": "SKEW([3,4,5,2,3,4,5,6,4,7])",
+        "result": "0.3595430714067974"
+    },
+    {
+        "calls": "SLOPE([1,9,5,7], [0,4,2,3])",
+        "result": "2"
+    },
+    {
+        "calls": "SMALL([3,5,3,5,4,4,2,4,6,7], 3)",
+        "result": "3"
+    },
+    {
+        "calls": "STANDARDIZE(42, 40, 1.5)",
+        "result": "1.3333333333333333"
+    },
+    {
+        "calls": "STDEVA([2,4], [8,16], [true, false])",
+        "result": "6.013872850889572"
+    },
+    {
+        "calls": "STDEVP([2,4], [8,16], [true, false])",
+        "result": "5.361902647381804"
+    },
+    {
+        "calls": "STDEVPA([2,4], [8,16], [true, false])",
+        "result": "5.489889697333535"
+    },
+    {
+        "calls": "STEYX([2,3,9,1,8,7,5], [6,5,11,7,5,4,4])",
+        "result": "3.305718950210041"
+    },
+    {
+        "calls": "TDIST(60, 1, true)",
+        "result": "Error: #NUM!"
+    },
+    {
+        "calls": "TINV(0.9946953263673741, 1)",
+        "result": "59.99999999996535"
+    },
+    {
+        "calls": "TRIMMEAN([4,5,6,7,2,3,4,5,1,2,3], 0.2)",
+        "result": "3.7777777777777777"
+    },
+    {
+        "calls": "VARA([2,4], [8,16], [true, false])",
+        "result": "36.16666666666667"
+    },
+    {
+        "calls": "VARP([2,4], [8,16], [true, false])",
+        "result": "28.75"
+    },
+    {
+        "calls": "VARPA([2,4], [8,16], [true, false])",
+        "result": "30.13888888888889"
+    },
+    {
+        "calls": "ZTEST([3,6,7,8,6,5,4,2,1,9], 4)",
+        "result": "0.09057419685136381"
+    },
+    {
+        "calls": "CHAR(65)",
+        "result": "A"
+    },
+    {
+        "calls": "CLEAN('Monthly report')",
+        "result": "Monthly report"
+    },
+    {
+        "calls": "CODE('A')",
+        "result": "65"
+    },
+    {
+        "calls": "CONCATENATE('Andreas', ' ', 'Hauser')",
+        "result": "Andreas Hauser"
+    },
+    {
+        "calls": "EXACT('Word', 'word')",
+        "result": "false"
+    },
+    {
+        "calls": "FIND('M', 'Miriam\u00a0McGovern', 3)",
+        "result": "8"
+    },
+    {
+        "calls": "LEFT('Sale Price', 4)",
+        "result": "Sale"
+    },
+    {
+        "calls": "LEN('Phoenix, AZ')",
+        "result": "11"
+    },
+    {
+        "calls": "LOWER('E. E. Cummings')",
+        "result": "e. e. cummings"
+    },
+    {
+        "calls": "MID('Fluid Flow', 7, 20)",
+        "result": "Flow"
+    },
+    {
+        "calls": "PROPER('this is a TITLE')",
+        "result": "This Is A Title"
+    },
+    {
+        "calls": "REPLACE('abcdefghijk', 6, 5, '*')",
+        "result": "abcde*k"
+    },
+    {
+        "calls": "REPT('*-', 3)",
+        "result": "*-*-*-"
+    },
+    {
+        "calls": "RIGHT('Sale Price', 5)",
+        "result": "Price"
+    },
+    {
+        "calls": "ROMAN(499)",
+        "result": "CDXCIX"
+    },
+    {
+        "calls": "SEARCH('margin', 'Profit Margin')",
+        "result": "8"
+    },
+    {
+        "calls": "SUBSTITUTE('Quarter 1, 2011', '1', '2', 3)",
+        "result": "Quarter 1, 2012"
+    },
+    {
+        "calls": "T('Rainfall')",
+        "result": "Rainfall"
+    },
+    {
+        "calls": "TRIM(' First Quarter Earnings ')",
+        "result": "First Quarter Earnings"
+    },
+    {
+        "calls": "TEXTJOIN(' ', true, 'The', '', 'sun', 'will', 'come', 'up', 'tomorrow.')",
+        "result": "The sun will come up tomorrow."
+    },
+    {
+        "calls": "UNICHAR(66)",
+        "result": "B"
+    },
+    {
+        "calls": "UNICODE('B')",
+        "result": "66"
+    },
+    {
+        "calls": "UPPER('total')",
+        "result": "TOTAL"
+    }
+]
