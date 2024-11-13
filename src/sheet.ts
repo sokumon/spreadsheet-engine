@@ -84,7 +84,7 @@ class Sheet{
     }
     
     addtoLocalStorage(): any{
-        localStorage.setItem("sheetData",JSON.stringify(this.cells))
+        localStorage.setItem(this.name,JSON.stringify(this.cells))
     }
 
     scan(line:string){

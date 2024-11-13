@@ -66,25 +66,25 @@ export enum Errors {
     CircularDependencyError = "Theres a circular dependency"
 }
 
-export const sheet: Sheet = {
-    cells: {
-      'a1': {
-        value: '1',
-        type: TokenTypes.Number,
-      },
-      'a2': {
-        value: '2',
-        type: TokenTypes.Number,
-      },
-      'b1': {
-        value: '3',
-        type: TokenTypes.Number,
-      },
-      'b2': {
-        value: '=SUM(a1, a2)',
-        type: TokenTypes.Formula,
-      }
-    }
-}
+// export const sheet: Sheet = {
+//     cells: {
+//       'a1': {
+//         value: '1',
+//         type: TokenTypes.Number,
+//       },
+//       'a2': {
+//         value: '2',
+//         type: TokenTypes.Number,
+//       },
+//       'b1': {
+//         value: '3',
+//         type: TokenTypes.Number,
+//       },
+//       'b2': {
+//         value: '=SUM(a1, a2)',
+//         type: TokenTypes.Formula,
+//       }
+//     }
+// }
 
 export type Value = null | string | number | boolean | object | Array<Value>;
