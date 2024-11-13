@@ -3,16 +3,12 @@ import { Cell } from "./cell";
 class Sheet{
     name: string;
     cells: Record<string,Cell>;
-    interpreter: Interpreter;
-    parser: Parser;
-    scanner: Scanner;
-    data = new Array();
+    data? = new Array();
 
 
     constructor(name: string = "Untitiled Sheet") {
         this.name = name;
         this.cells = {}
-        this.interpreter = new Interpreter();
         this.data = []
     }
 
@@ -23,7 +19,8 @@ class Sheet{
         const parser = new Parser(tokens);
         parser.cells = this.cells
         const expression = parser.parse();
-        const result = this.interpreter.interpret(expression);
+        const interpreter =  new Interpreter()
+        const result = interpreter.interpret(expression);
         return result; 
     }
 

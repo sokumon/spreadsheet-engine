@@ -43,7 +43,14 @@ export class WorkBook{
         return sheetNames
     }
 
+    removeDataKey(){
+        // removing the 'data' because this is only for working with Datatable for the frontend
+        this.sheets.forEach(sheet =>{
+            delete sheet["data"]
+        })
+    }
     save(){
+        this.removeDataKey()
         return JSON.stringify(this.sheets)
     }
 }
