@@ -3,7 +3,7 @@ import { Cell } from "./cell";
 class Sheet{
     name: string;
     cells: Record<string,Cell>;
-    data? = new Array();
+    data = new Array();
 
 
     constructor(name: string = "Untitiled Sheet") {

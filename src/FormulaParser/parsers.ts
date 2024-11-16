@@ -1,4 +1,4 @@
-import { Token, Value } from "./defination";
+import { CellType, Token, Value } from "./defination";
 import { Expr, Unary, Literal, Binary, Grouping , Call, EArray} from "./ast";
 import { TokenTypes } from "./defination";
 import { Cell } from "../cell";
@@ -106,7 +106,8 @@ export class Parser {
     
         if (this.match(TokenTypes.FALSE)) return new Literal(false);
         if (this.match(TokenTypes.TRUE)) return new Literal(true);
-        if (this.match(TokenTypes.Cell)) { 
+        if (this.match(TokenTypes.Cell)) {
+
             const start = this.previous().value; 
             if (this.match(TokenTypes.rangeOp)){
 
@@ -116,6 +117,11 @@ export class Parser {
                 
                 const end = this.previous().value;
                 let cellRangeValues =  this.fetchCellRange(`${start}:${end}`)
+                // if it is only A1:A3 then throw ARRAYFORMULAERROR 
+                if(this.current - 4 < 0){
+                    throw Error("ARRAYFORMULA")
+                }
+                
                 return new Literal(cellRangeValues); 
             }
             
@@ -184,7 +190,7 @@ export class Parser {
 
     fetchCellValue(key: string){
         if(this.cells[key]){
-            if(this.cells[key].type == TokenTypes.Number){
+            if(this.cells[key].type == CellType.Number){
                 return parseInt(this.cells[key].value?.toString()!)
             }
             return this.cells[key].value?.toString()
