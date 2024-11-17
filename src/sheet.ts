@@ -1,11 +1,17 @@
 import { Scanner, Parser, Interpreter } from "./FormulaParser/";
 import { Cell } from "./cell";
+// index signature as dont know what all styles can be added
+// https://www.typescriptlang.org/docs/handbook/2/objects.html#index-signatures
+interface CellStyleInterface {
+    [key: string]: { [property: string]: string | number }; 
+}
+interface SheetStyleInterface { [key: string| number]: string | number }
 class Sheet{
     name: string;
     cells: Record<string,Cell>;
     data = new Array();
-    cellStyles: Object;
-    sheetStyles: Object
+    cellStyles: CellStyleInterface
+    sheetStyles: SheetStyleInterface;
 
 
 
@@ -95,15 +101,19 @@ class Sheet{
         return scanner.getTokens();
     }
 
-    addStyles(type:string, styleObject: Object){
-        if(type === "cell"){
-            this.cellStyles = styleObject
-        }else if(type === "sheet"){
-            this.sheetStyles = styleObject
+    // StyleObject will be { "A1" : }
+    addStyles(type:string, styleObject: CellStyleInterface| SheetStyleInterface){
+        let targetStyles = type === "cell" ? this.cellStyles : this.sheetStyles;
+    
+        for (let key in styleObject) {
+            console.log(styleObject[key])
+            if (targetStyles[key]) {
+                Object.assign(targetStyles[key], styleObject[key]);
+            } else {
+                targetStyles[key] = styleObject[key];
+            }
         }
     }
-
-
 
 
 }

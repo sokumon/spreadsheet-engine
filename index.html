@@ -22,7 +22,32 @@
         sheetOne.flush()
 
         sheetOne.addCell("B1","1234")
+
+        let cellStyles = {
+            "A1": {
+                "textAlign": "left"
+            }
+        }
         
+        sheetOne.addStyles("cell",cellStyles)
+
+        
+        let sheetStyles = {
+            // column width
+             "A":"123px" ,
+            // row height
+            "1":"12px"
+        }
+
+        sheetOne.addStyles("sheet",sheetStyles)
+
+        let cellStyles1 = {
+            "A1": {
+                "textDecoration": ["underline"]
+            }
+        }
+
+        sheetOne.addStyles("cell",cellStyles1)
 
     </script>
     <!-- <script src="node_modules/@formulajs/formulajs/types/esm/index.d.mts"></script> -->
