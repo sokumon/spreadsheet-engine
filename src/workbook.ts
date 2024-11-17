@@ -1,6 +1,6 @@
 import { Sheet } from "./sheet"
 
-export class WorkBook{
+export class Workbook{
     // this and the title of the sheet should match
     title: string;
     sheets: Sheet[]
@@ -9,6 +9,7 @@ export class WorkBook{
         this.title = title,
         this.sheets = []
     }
+
     addSheet(): Sheet{
         let name = `Sheet ${this.sheets.length + 1}`
         let newSheet = new Sheet(name)
@@ -35,6 +36,7 @@ export class WorkBook{
         }
         return false
     }
+
     getSheetNames(): string[]{
         let sheetNames: string[]= []
         for(let i=0; i < this.sheets.length ;i++){
@@ -53,8 +55,13 @@ export class WorkBook{
         })
         return savedSheets
     }
+
     save(){
         let sheettoSave = this.removeDataKey()
         return JSON.stringify(sheettoSave)
+    }
+
+    getSheetByName(sheetName: string){
+        return this.sheets.find(sheet => sheet.name == sheetName)
     }
 }
