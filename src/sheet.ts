@@ -4,12 +4,17 @@ class Sheet{
     name: string;
     cells: Record<string,Cell>;
     data = new Array();
+    cellStyles: Object;
+    sheetStyles: Object
+
 
 
     constructor(name: string = "Untitiled Sheet") {
         this.name = name;
         this.cells = {}
         this.data = []
+        this.cellStyles = {}
+        this.sheetStyles = {}
     }
 
     parseFormula(input: string): any {
@@ -89,6 +94,18 @@ class Sheet{
         scanner.scanTokens()
         return scanner.getTokens();
     }
+
+    addStyles(type:string, styleObject: Object){
+        if(type === "cell"){
+            this.cellStyles = styleObject
+        }else if(type === "sheet"){
+            this.sheetStyles = styleObject
+        }
+    }
+
+
+
+
 }
 export {
     Sheet
