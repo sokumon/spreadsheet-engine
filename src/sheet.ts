@@ -55,6 +55,10 @@ class Sheet{
     getCell(key:string){
         return this.cells[key]
     }
+    
+    removeCell(key: string){
+        delete this.cells[key]
+    }
     recalculate(key: string){
         let cell = this.cells[key];
         if (cell.rawFormulaText){
