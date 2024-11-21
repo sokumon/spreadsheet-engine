@@ -34,9 +34,13 @@
         
         let sheetStyles = {
             // column width
-             "A":"123px" ,
+             "A":{
+                width:"123px"
+             } ,
             // row height
-            "1":"12px"
+            "1":{
+                height:"12px"
+            }
         }
 
         sheetOne.addStyles("sheet",sheetStyles)
@@ -48,6 +52,15 @@
         }
 
         sheetOne.addStyles("cell",cellStyles1)
+
+
+        let cellStyles2 = {
+            "A1": {
+                "textDecoration": ["bold"]
+            }
+        }
+
+        sheetOne.addStyles("cell",cellStyles2)
 
     </script>
     <!-- <script src="node_modules/@formulajs/formulajs/types/esm/index.d.mts"></script> -->

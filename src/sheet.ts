@@ -106,20 +106,49 @@ class Sheet{
     }
 
     // StyleObject will be { "A1" : }
-    addStyles(type:string, styleObject: CellStyleInterface| SheetStyleInterface){
+    addStyles(type: string, styleObject: CellStyleInterface | SheetStyleInterface) {
         let targetStyles = type === "cell" ? this.cellStyles : this.sheetStyles;
     
         for (let key in styleObject) {
-            console.log(styleObject[key])
-            if (targetStyles[key]) {
-                Object.assign(targetStyles[key], styleObject[key]);
-            } else {
-                targetStyles[key] = styleObject[key];
+            if (styleObject.hasOwnProperty(key)) {
+                let properties = Object.entries(styleObject[key]);
+    
+                properties.forEach(([property, value]) => {
+                    if (Array.isArray(value)) {
+                        // Initialize the key 
+                        if (!targetStyles[key]) {
+                            targetStyles[key] = {};
+                        }
+                        // Initialize the property 
+                        if (!targetStyles[key][property]) {
+                            targetStyles[key][property] = [];
+                        }
+                        // Merge the array values
+                        targetStyles[key][property] = targetStyles[key][property].concat(value);
+                    } else {
+                        // For non-array values, just assign the property
+                        if (!targetStyles[key]) {
+                            targetStyles[key] = {};
+                        }
+                        targetStyles[key][property] = value;
+                    }
+                });
             }
         }
     }
-
-
+    
+    
+    _addStyle(targetStyles, key, property, value) {
+        if (!targetStyles[key]) {
+            targetStyles[key] = {};
+        }
+    
+        if (Array.isArray(value)) {
+            targetStyles[key][property] = value;
+        } else {
+            Object.assign(targetStyles[key], { [property]: value });
+        }
+    }
 }
 export {
     Sheet
